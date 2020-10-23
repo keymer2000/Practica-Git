@@ -1,0 +1,368 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: sans-serif;
+
+}
+
+body{
+	background-color: none;
+	position: relative;
+
+
+}
+
+.contenedor2{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: 100px;
+}
+
+.contenedor1{
+	text-align: center;
+	color: #0068FF;
+	background: white;
+}
+
+.menu{
+	background: #0068FF;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	/* border: 1px solid black;*/
+	
+}
+
+.menu ul{
+	display: flex;
+	list-style: none; 
+
+}
+
+.menu ul li{
+	text-align: center;
+	flex-grow: 1;
+	padding: 2px;
+	position: relative;/* este se agrega para que los <ul> del submenu se relaciones con  el <li> principal */
+
+
+}
+
+.menu ul li a{
+	display: block;
+	background: #0068FF; 
+	color: white;
+	font-size: 16px; 
+	font-weight: bold;
+	padding: 8px 15px;
+	border: 1px solid #0068FF;
+	border-radius: 15px 15px;
+	
+
+}
+
+.menu ul li a:hover{
+	background: white;
+	color: #0068FF;
+	transition: 0.3s;
+
+}
+
+/* diseño de desplegable de los <ul>*/
+.menu ul li:hover > ul{
+	opacity: 1;
+	visibility: visible;
+	transition: .3s linear;
+}
+
+.menu ul ul{
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* diseño del segundo nivel del menu de navegacion*/
+
+.menu ul li ul{
+	width: 240px;
+	position: absolute;
+	background: #0068FF;
+	top: 40px;
+	left: 0;
+	flex-direction: column;
+	border: 1px solid gray;
+	border-radius: 15px 15px;
+	z-index: 3;
+}
+
+.menu ul li ul li{
+	padding: 4px 4px;
+	text-align: left;
+	
+}
+
+.menu ul li ul li a{
+	background: #0068FF;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 4px 10px;
+
+}
+
+.icon-right-open{
+	float: right;
+}
+
+
+/* diseño del tercer nivel del menu de navegacion*/
+
+.menu ul li ul li ul{
+	position: absolute;
+	width: 370px;
+	top: 0px;
+	left: 238px;
+	
+}
+
+/* diseño de flexslider************************************************************************************************************+*/
+
+.flexslider{
+	width: 100%;
+	/*max-width: 1000px;*/
+	height: 420px;
+	margin: 40px auto;
+	/*border: 2px solid #0068FF;*/
+	border-top: none;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.slides,
+.slides li,
+.slides li img{
+	width: 100%;
+	height: 420px;
+}
+
+.slides li{
+	margin-bottom: -5px;
+}
+
+/* paginacion */
+
+.flex-control-nav.flex-control-paging{
+	width: 120px;
+	padding: 10px 0px;
+	background: #0068FF;
+	border: 2px solid rgba(0,0,0,0.4);
+	border-radius: 8px;
+
+/* diseño de los botones*/
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	align-self: center;
+	list-style: none;
+	position:  absolute;
+	bottom: 0px;
+	z-index: 2;
+	
+
+	
+}
+
+.flex-control-nav li{
+	display: inline-block;
+	margin: 0 5px;
+
+}
+
+.flex-control-nav li a{
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: white;
+	border-radius: 50%;
+	text-indent: -9999px;
+
+
+}
+
+
+.flex-control-nav li a.flex-active{
+	background: black;
+
+}
+
+
+/* navegacion*/
+
+.flex-direction-nav{
+	position: absolute;
+	list-style: none;
+}
+
+.flex-direction-nav a{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+	background: #0068FF;
+	display: flex;
+
+
+}
+
+
+.flex-direction-nav a {
+	display: none;
+
+}
+
+
+/**************************************** diseño cuerpo de la pagina****************************************/
+.bienvenido{
+	text-align: center;
+}
+
+
+.fila{
+	padding: 0 50px 0 50px;
+	width: 100%;
+	margin-top: 40px;
+	height: auto;
+	border: 0px solid black;
+}
+
+/* diseño de la fila del texto*******************************************/
+
+
+.col-7{
+	float: left;
+	border: 0px solid black;
+	width: 58.33333333%;
+
+	
+}
+
+.col-7 > p{
+	width: 100%;
+	text-align: justify;
+	
+	
+	
+}
+
+/* diseño de la fila de imagenes****************************************/
+
+.col-5{
+	border: 0px solid black;
+	width:41.66666667%;
+	height: 400px;
+	float: left;
+}
+
+
+.col-5 > img{
+	width: 80%;
+	height: 100%;
+	border: 0px solid black;
+	border-radius: 100%;
+	float: right;
+
+}
+
+.fila2{
+	width: 100%; 
+	height: auto;
+	border: 0px solid black;
+	margin-top: 30px;
+	float: left;
+	padding-right: 20px; 
+	padding-left: 25px;
+}
+
+.fila2 >.col-3{
+	width: 33%;
+	border: 1px solid gray; 
+	border-radius: 20px; 
+	float: left;
+	/*margin-top: 30px;*/
+
+}
+
+
+
+.col-3-medio{
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+
+.fila2 > .col-3 >.container4{
+	border: 0px solid black;
+	width: 80%; /* el ancho de la imagen tiene que ser de 400px para el container 4 que es el de la seccion de noticias*/
+	height: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 30px; 
+}
+
+.fila2 >.col-3 > p{
+	text-align: justify;
+	padding: 10px 30px;
+
+}
+
+.fila2 > .col-3 >.container4 > img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* DISEÑO DE ESCRITORIO GRANDE - LARGE (lg)***********************************************************/
+
+@media(min-width: 1200px){
+
+}
+
+
+
+
+
+
+
+
+
+/* DISEÑO DE ESCRITORIO MEDIANO - MEDIUM (md)**********************************************************/
+
+@media(max-width: 1199px) and (min-width: 992px){
+
+}
+
+
+
+
+
+
+
+/* PANTALLA DE TABLET  - SMALL (sm)*********************************************************************/
+
+@media(max-width: 991px) and (min-width: 768px){
+
+}
+
+
+
+
+
+
+
+/* PANTALLA DE PHONES  - EXTRA SMALL (xm)**************************************************************/
+
+@media(max-width: 768px){
+
+}
